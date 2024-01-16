@@ -65,27 +65,57 @@ for (let i = 1; i < n+1; i++) {
 const list = ["apple", "banana", "cherry", "date", "elderberry"];
 // TODO 2.6 Use a while loop to display all the values in the list
 // Your code here
+while (true) {
+    console.log(list);
+    break;
+}
+
 
 // Checkpoint 2.3 What is the difference between do while and while loop?
 // Answer: 
+console.log("while loop analzyes the condition before the block of code.; ");
+console.log("do-while loop analyzes the condition after the block of code.")
 
 // TODO 2.7 Use a for of loop to display all the values in the list
 // Your code here
+for (let i = 0; i < list.length; i++) {
+    console.log(list[i]);
+  }
+
 
 // TODO 2.8 Use a for in loop to display all the values in the list
 // Your code here
+for (let index in list) {
+    console.log(list[index]);
+
+}
 
 // TODO 2.9 Use the for each method of the list to display all its values 
 // Your code here
-
+list.forEach(element => {
+    console.log(element);
+  });
 // Checkpoint 2.2 When should you use for of, for in, or .forEach loops? Try researching the answer
 // Answer: 
-
+console.log("use for..of whenever using indexes");
+console.log("use for..in for objects");
+console.log("for arrays, use for each");
 // TODO 2.10 Use the try and catch block to catch division by zero errors in the code below.
 // In the finally block, simulate cleaning up resources by displaying "cleaning up resources"
 const numerator = Math.floor((Math.random() * 100) + 1);
 const denominator = Math.floor((Math.random() * 5)); // feel free to mock this value for testing
 
+try {
+    if (denominator === 0) {
+        throw new Error("Division by zero error");
+    } else {
+        console.log(numerator / denominator);
+    }
+} catch (error) {
+    console.error("Error:", error.message);
+} finally {
+    console.log("Cleaning up resources");
+}
 
 /*if(denominator === 0){
     throw new Error("Division by zero error")

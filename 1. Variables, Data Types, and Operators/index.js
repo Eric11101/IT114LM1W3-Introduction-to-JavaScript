@@ -23,7 +23,9 @@ console.log(val);
 
 // Checkpoint 1.1 What is the difference between var, let, and const?
 // Answer:
-
+console.log("variables using var can be used throughout the function.");
+console.log("variables using let is used if you want block-scoped variables that can be reassigned.");
+console.log("const is used if u want the variables to be fixed")
 
 
 // TODO 1.4 Try out the different arithmetic operators
