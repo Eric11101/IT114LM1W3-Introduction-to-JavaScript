@@ -33,6 +33,7 @@
             - See other event listener mechanisms section -->
 <button>Call inline event handler</button>
 
+
 <!-- Todo 3.3a Create a button with the text "Call addEventListener" -->
 <button>Call addEventListener</button>
 
@@ -51,10 +52,21 @@
 
 
 <body>
+    <form>
+        <input type = "text" name = "firstName" id = "firstName">
+        <input type = "text" name = "lastName" id = "lastName">
+        <button id="submit-btn">Submit</button>
+
+    </form>
     <script>
+        const results = {}
+        const firstNameInput = document.getElementById("firsName")
+        const lastNameInput = document.getElementById("lastName")
+
         // Todo 3.1 When the page has loaded, log "The page has loaded"
         // Resource: https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event
-
+        const results = []
+        const firstNameInput
         // Todo 3.3b Add an event handler for the button created in 2.3a.
         //          The event handler should log "From addEventListener" when the button is clicked
         // Resource: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#using_addeventlistener
@@ -67,7 +79,14 @@
         // Todo 3.3b When the user presses the submit form button, append the contents of the form to results.
         //          Then, display the content of results
         // Resource: https://stackoverflow.com/questions/11563638/how-do-i-get-the-value-of-text-input-field-using-javascript
-        
+        document.getElementById("submit-btn").addEventListener("click", (e) => {
+            e.preventDefault()
+
+            COnsole.log({
+                firstname: firstNameInput.value,
+                lastName: lastName.value,           
+            })
+        })
         // Todo 3.5 add event listenders for the grandparent, parent, and child divs. 
         //          When clicked, the grandparent, parent, and child should log "Grandparent", "Parent", and "Child" respectively
         // Resource: https://youtu.be/XF1_MlZ5l6M?si=QrNjKXg-xXV6yghW @ 4:00 of the video
